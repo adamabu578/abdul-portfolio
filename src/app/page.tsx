@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Layout, Monitor, Smartphone, Download, Sparkles, Diamond, Image as ImageIcon, Video, BookOpen, Eye, Box, PenTool, Mail } from "lucide-react";
+import { ArrowRight, Layout, Monitor, Smartphone, Download, Sparkles, Diamond, Image as ImageIcon, Video, BookOpen, Eye, Box, PenTool, Mail, Github, ExternalLink } from "lucide-react";
 
 export default function Home() {
   return (
@@ -66,13 +66,13 @@ export default function Home() {
 
       {/* --- MARQUEE SECTION --- */}
       <section className="w-full bg-[#39FF14] py-4 border-y-2 border-black overflow-hidden relative">
-        <div className="flex whitespace-nowrap w-[200%] animate-marquee">
+        <div className="flex whitespace-nowrap w-max animate-marquee">
           {[...Array(2)].map((_, idx) => (
-            <div key={idx} className="flex items-center justify-around w-1/2 text-black font-extrabold text-2xl md:text-4xl tracking-wider uppercase">
-              <span className="flex items-center gap-4 md:gap-8">Backend Architecture <span>*</span></span>
-              <span className="flex items-center gap-4 md:gap-8">Frontend Development <span>*</span></span>
-              <span className="flex items-center gap-4 md:gap-8">System Design <span>*</span></span>
-              <span className="flex items-center gap-4 md:gap-8">Cloud Deployment <span>*</span></span>
+            <div key={idx} className="flex items-center shrink-0 text-black font-extrabold text-2xl md:text-4xl tracking-wider uppercase">
+              <span className="flex items-center gap-4 md:gap-8 px-4 md:px-8">Backend Architecture <span>*</span></span>
+              <span className="flex items-center gap-4 md:gap-8 px-4 md:px-8">Frontend Development <span>*</span></span>
+              <span className="flex items-center gap-4 md:gap-8 px-4 md:px-8">System Design <span>*</span></span>
+              <span className="flex items-center gap-4 md:gap-8 px-4 md:px-8">Cloud Deployment <span>*</span></span>
             </div>
           ))}
         </div>
@@ -195,6 +195,97 @@ export default function Home() {
                 Download CV
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- WORKS SECTION --- */}
+      <section className="py-24 px-6 max-w-7xl mx-auto relative">
+        <div className="absolute top-20 left-1/2 -translate-x-1/2 text-[120px] md:text-[200px] font-black text-gray-50 uppercase tracking-tighter -z-10 select-none pointer-events-none whitespace-nowrap">
+          MY WORK
+        </div>
+
+        <div className="flex flex-col gap-12">
+          <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6">
+            <div className="space-y-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-100 bg-white shadow-sm">
+                <Sparkles className="w-4 h-4 text-[#39FF14]" />
+                <span className="text-sm font-semibold text-gray-700">Portfolio</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">
+                Selected <span className="text-[#39FF14]">Projects</span>
+              </h2>
+            </div>
+            <Button variant="outline" className="rounded-full px-6 py-5 font-semibold transition-all border-gray-200 text-gray-900 hover:bg-gray-50">
+              View All Projects
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                title: "FinTech Dashboard",
+                category: "Frontend Development",
+                description: "A comprehensive financial dashboard with real-time analytics, secure transactions, and interactive data visualization.",
+                tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+                image: "bg-gray-900"
+              },
+              {
+                title: "E-Commerce API",
+                category: "Backend Architecture",
+                description: "Scalable microservices architecture for a high-traffic e-commerce platform handling thousands of requests per second.",
+                tags: ["Node.js", "PostgreSQL", "Redis", "Docker"],
+                image: "bg-gray-800"
+              },
+              {
+                title: "AI Content Platform",
+                category: "Full Stack Development",
+                description: "SaaS application that leverages AI models to generate marketing copy, blog posts, and social media content.",
+                tags: ["React", "Python", "OpenAI API"],
+                image: "bg-gray-800"
+              },
+              {
+                title: "Cloud Resource Manager",
+                category: "DevOps & Infrastructure",
+                description: "Internal tool for automated provisioning, monitoring, and scaling of cloud resources across multiple providers.",
+                tags: ["Go", "Kubernetes", "AWS", "Terraform"],
+                image: "bg-gray-900"
+              }
+            ].map((project, i) => (
+              <Card key={i} className="border-none shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] bg-white/80 backdrop-blur-md hover:-translate-y-2 transition-transform duration-300 rounded-3xl overflow-hidden group">
+                <div className={`h-64 w-full ${project.image} relative overflow-hidden flex items-center justify-center p-6`}>
+                  {/* Decorative background for placeholder */}
+                  <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+                  <div className="relative z-10 w-full h-full border-2 border-dashed border-gray-600 rounded-xl flex items-center justify-center bg-black/20 backdrop-blur-sm group-hover:border-[#39FF14] transition-colors">
+                     <ImageIcon className="w-12 h-12 text-gray-500 group-hover:text-[#39FF14] transition-colors" />
+                  </div>
+                  
+                  {/* Overlay buttons on hover */}
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 z-20">
+                     <Button className="bg-[#39FF14] text-black hover:bg-[#32e011] rounded-full">
+                       <Eye className="w-4 h-4 mr-2" /> Live Demo
+                     </Button>
+                     <Button variant="secondary" className="bg-white text-black hover:bg-gray-100 rounded-full">
+                       <Github className="w-4 h-4 mr-2" /> Source
+                     </Button>
+                  </div>
+                </div>
+                <CardContent className="p-8">
+                  <div className="text-sm font-bold text-[#39FF14] uppercase tracking-wider mb-2">{project.category}</div>
+                  <CardTitle className="text-2xl font-bold text-gray-900 mb-3">{project.title}</CardTitle>
+                  <CardDescription className="text-gray-500 text-base leading-relaxed mb-6">
+                    {project.description}
+                  </CardDescription>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag, j) => (
+                      <Badge key={j} variant="secondary" className="bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
