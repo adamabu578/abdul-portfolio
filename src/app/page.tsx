@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Layout, Monitor, Smartphone, Download, Sparkles, Diamond, Image as ImageIcon, Video, BookOpen, Eye, Box, PenTool, Mail, Github, ExternalLink } from "lucide-react";
+import { ArrowRight, Layout, Monitor, Smartphone, Download, Sparkles, Diamond, Image as ImageIcon, Video, BookOpen, Eye, Box, PenTool, Mail, Code, ExternalLink } from "lucide-react";
 
 export default function Home() {
   return (
@@ -266,7 +266,7 @@ export default function Home() {
                        <Eye className="w-4 h-4 mr-2" /> Live Demo
                      </Button>
                      <Button variant="secondary" className="bg-white text-black hover:bg-gray-100 rounded-full">
-                       <Github className="w-4 h-4 mr-2" /> Source
+                       <Code className="w-4 h-4 mr-2" /> Source
                      </Button>
                   </div>
                 </div>
