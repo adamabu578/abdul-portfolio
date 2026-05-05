@@ -79,7 +79,7 @@ export default function Home() {
       </section>
 
       {/* --- SERVICES SECTION --- */}
-      <section className="py-24 px-6 max-w-7xl mx-auto relative">
+      <section id="services" className="py-24 px-6 max-w-7xl mx-auto relative">
         <div className="absolute top-20 left-1/2 -translate-x-1/2 text-[150px] md:text-[200px] font-black text-gray-50 uppercase tracking-tighter -z-10 select-none pointer-events-none whitespace-nowrap">
           SERVICES
         </div>
@@ -129,7 +129,7 @@ export default function Home() {
       </section>
 
       {/* --- ABOUT SECTION --- */}
-      <section className="py-24 px-6 max-w-7xl mx-auto relative">
+      <section id="about" className="py-24 px-6 max-w-7xl mx-auto relative">
         <div className="absolute top-20 left-1/2 -translate-x-1/2 text-[150px] md:text-[200px] font-black text-gray-50 uppercase tracking-tighter -z-10 select-none pointer-events-none whitespace-nowrap">
           ABOUT ME
         </div>
@@ -200,7 +200,7 @@ export default function Home() {
       </section>
 
       {/* --- WORKS SECTION --- */}
-      <section className="py-24 px-6 max-w-7xl mx-auto relative">
+      <section id="works" className="py-24 px-6 max-w-7xl mx-auto relative">
         <div className="absolute top-20 left-1/2 -translate-x-1/2 text-[120px] md:text-[200px] font-black text-gray-50 uppercase tracking-tighter -z-10 select-none pointer-events-none whitespace-nowrap">
           MY WORK
         </div>
