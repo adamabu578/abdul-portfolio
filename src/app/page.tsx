@@ -7,17 +7,17 @@ import { ArrowRight, Layout, Monitor, Smartphone, Download, Sparkles, Diamond, I
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-gray-900 overflow-x-hidden relative">
+    <main className="min-h-screen bg-[#1F1F1F] text-[#F8F9FA] overflow-x-hidden relative">
       {/* --- HERO SECTION --- */}
       <section className="relative pt-20 pb-24 md:pt-32 md:pb-32 px-6 max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-16">
         <div className="flex-1 space-y-8 z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-100 bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.1)]">
-            <Sparkles className="w-4 h-4 text-[#39FF14]" />
-            <span className="text-sm font-semibold text-gray-700">Hello There!</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-800 bg-[#1F1F1F] shadow-[0_2px_10px_-3px_rgba(6,81,237,0.1)]">
+            <Sparkles className="w-4 h-4 text-[#FF6C37]" />
+            <span className="text-sm font-semibold text-gray-300">Hello There!</span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900 leading-[1.1]">
-            <span className="text-[#39FF14]">I'm Abdul Dev,</span><br />
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-[#F8F9FA] leading-[1.1]">
+            <span className="text-[#FF6C37]">I'm Abdul Dev,</span><br />
             Senior Software<br /> Engineer based in NIG.
           </h1>
 
@@ -26,10 +26,10 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
-            <Button className="w-full sm:w-auto bg-[#39FF14] text-black hover:bg-[#32e011] rounded-full px-8 py-6 text-base font-semibold shadow-[0_8px_20px_-6px_rgba(57,255,20,0.5)] transition-all">
+            <Button className="w-full sm:w-auto bg-[#FF6C37] text-[#1F1F1F] hover:bg-[#e65c2b] rounded-full px-8 py-6 text-base font-semibold shadow-[0_8px_20px_-6px_rgba(57,255,20,0.5)] transition-all">
               View My Work
             </Button>
-            <Button variant="outline" className="w-full sm:w-auto rounded-full px-8 py-6 text-base font-semibold border-gray-200 text-gray-700 hover:bg-gray-50 transition-all gap-2">
+            <Button variant="outline" className="w-full sm:w-auto rounded-full px-8 py-6 text-base font-semibold border-gray-700 text-gray-300 hover:bg-[#FF6C37] hover:text-[#1F1F1F] hover:border-[#FF6C37] transition-all gap-2">
               Download CV <Download className="w-4 h-4" />
             </Button>
           </div>
@@ -37,8 +37,8 @@ export default function Home() {
 
         <div className="flex-1 relative flex justify-center lg:justify-end items-center w-full max-w-[500px] lg:max-w-none">
           {/* Background circles */}
-          <div className="absolute w-[300px] h-[300px] md:w-[450px] md:h-[450px] bg-[#39FF14] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-          <div className="absolute w-[350px] h-[350px] md:w-[500px] md:h-[500px] bg-[#39FF14]/20 rounded-full blur-3xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute w-[300px] h-[300px] md:w-[450px] md:h-[450px] bg-[#FF6C37] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute w-[350px] h-[350px] md:w-[500px] md:h-[500px] bg-[#FF6C37]/20 rounded-full blur-3xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
 
           <div className="relative z-10 w-full flex justify-center">
             <Image
@@ -52,23 +52,23 @@ export default function Home() {
           </div>
 
           {/* Floating Badges */}
-          <div className="absolute top-10 right-4 md:right-10 bg-black text-white px-5 py-3 rounded-full text-sm font-bold shadow-2xl rotate-12 z-20 flex items-center justify-center border-2 border-[#39FF14] w-[100px] h-[100px]">
+          <div className="absolute top-10 right-4 md:right-10 bg-[#2A2A2A] text-[#F8F9FA] px-5 py-3 rounded-full text-sm font-bold shadow-2xl rotate-12 z-20 flex items-center justify-center border-2 border-[#FF6C37] w-[100px] h-[100px]">
             <div className="text-center leading-tight text-xs uppercase tracking-widest">Hire<br />Me</div>
           </div>
-          <div className="absolute bottom-16 -left-4 md:left-10 bg-[#39FF14] text-black px-6 py-2.5 rounded-full text-sm font-bold shadow-xl -rotate-6 z-20">
+          <div className="absolute bottom-16 -left-4 md:left-10 bg-[#FF6C37] text-[#1F1F1F] px-6 py-2.5 rounded-full text-sm font-bold shadow-xl -rotate-6 z-20">
             Backend Dev
           </div>
-          <div className="absolute top-1/2 -right-4 md:right-0 bg-black text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-xl z-20">
+          <div className="absolute top-1/2 -right-4 md:right-0 bg-[#2A2A2A] text-[#F8F9FA] px-6 py-2.5 rounded-full text-sm font-bold shadow-xl z-20">
             Frontend Dev
           </div>
         </div>
       </section>
 
       {/* --- MARQUEE SECTION --- */}
-      <section className="w-full bg-[#39FF14] py-4 border-y-2 border-black overflow-hidden relative">
+      <section className="w-full bg-[#FF6C37] py-4 border-y-2 border-[#1F1F1F] overflow-hidden relative">
         <div className="flex whitespace-nowrap w-max animate-marquee">
           {[...Array(2)].map((_, idx) => (
-            <div key={idx} className="flex items-center shrink-0 text-black font-extrabold text-2xl md:text-4xl tracking-wider uppercase">
+            <div key={idx} className="flex items-center shrink-0 text-[#1F1F1F] font-extrabold text-2xl md:text-4xl tracking-wider uppercase">
               <span className="flex items-center gap-4 md:gap-8 px-4 md:px-8">Backend Architecture <span>*</span></span>
               <span className="flex items-center gap-4 md:gap-8 px-4 md:px-8">Frontend Development <span>*</span></span>
               <span className="flex items-center gap-4 md:gap-8 px-4 md:px-8">System Design <span>*</span></span>
@@ -80,22 +80,22 @@ export default function Home() {
 
       {/* --- SERVICES SECTION --- */}
       <section id="services" className="py-24 px-6 max-w-7xl mx-auto relative">
-        <div className="absolute top-20 left-1/2 -translate-x-1/2 text-[150px] md:text-[200px] font-black text-gray-50 uppercase tracking-tighter -z-10 select-none pointer-events-none whitespace-nowrap">
+        <div className="absolute top-10 md:top-20 left-1/2 -translate-x-1/2 text-[25vw] md:text-[150px] lg:text-[200px] font-black text-[#F8F9FA]/5 uppercase tracking-tighter -z-10 select-none pointer-events-none whitespace-nowrap">
           SERVICES
         </div>
 
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-12 relative z-10">
           <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6">
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-100 bg-white shadow-sm">
-                <Sparkles className="w-4 h-4 text-[#39FF14]" />
-                <span className="text-sm font-semibold text-gray-700">My Specialization</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-800 bg-[#1F1F1F] shadow-sm">
+                <Sparkles className="w-4 h-4 text-[#FF6C37]" />
+                <span className="text-sm font-semibold text-gray-300">My Specialization</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">
-                <span className="text-[#39FF14]">Services</span> I Provide
+              <h2 className="text-4xl md:text-5xl font-extrabold text-[#F8F9FA]">
+                <span className="text-[#FF6C37]">Services</span> I Provide
               </h2>
             </div>
-            <Button className="bg-[#39FF14] text-black hover:bg-[#32e011] rounded-full px-6 py-5 font-semibold transition-all shadow-md hover:shadow-lg">
+            <Button className="w-full md:w-auto bg-[#FF6C37] text-[#1F1F1F] hover:bg-[#e65c2b] rounded-full px-6 py-5 font-semibold transition-all shadow-md hover:shadow-lg">
               View All Services
             </Button>
           </div>
@@ -106,20 +106,20 @@ export default function Home() {
               { title: "Frontend Development", icon: Layout, desc: "Building beautiful, responsive, and dynamic user interfaces using React, Next.js, and modern CSS frameworks like Tailwind." },
               { title: "Cloud & DevOps", icon: Monitor, desc: "Deploying and managing scalable infrastructure on AWS/GCP, setting up CI/CD pipelines, and ensuring system reliability." }
             ].map((service, i) => (
-              <Card key={i} className="border-none shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] bg-white/80 backdrop-blur-md hover:-translate-y-2 transition-transform duration-300 rounded-3xl overflow-hidden group">
+              <Card key={i} className="border-none shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] bg-[#1F1F1F]/80 backdrop-blur-md hover:-translate-y-2 transition-transform duration-300 rounded-3xl overflow-hidden group">
                 <CardHeader className="p-8">
-                  <div className="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-[#39FF14] transition-colors relative">
-                    <div className="absolute -left-2 top-2 w-2 h-8 bg-[#39FF14] rounded-r-md group-hover:bg-black transition-colors" />
-                    <service.icon className="w-7 h-7 text-gray-800 group-hover:text-black" />
+                  <div className="w-14 h-14 bg-[#2A2A2A] rounded-2xl flex items-center justify-center mb-4 group-hover:bg-[#FF6C37] transition-colors relative">
+                    <div className="absolute -left-2 top-2 w-2 h-8 bg-[#FF6C37] rounded-r-md group-hover:bg-[#2A2A2A] transition-colors" />
+                    <service.icon className="w-7 h-7 text-[#F8F9FA] group-hover:text-[#1F1F1F]" />
                   </div>
-                  <CardTitle className="text-2xl font-bold text-gray-900">{service.title}</CardTitle>
+                  <CardTitle className="text-2xl font-bold text-[#F8F9FA]">{service.title}</CardTitle>
                   <CardDescription className="text-gray-500 text-base mt-3 leading-relaxed">
                     {service.desc}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="px-8 pb-8">
-                  <a href="#" className="inline-flex items-center font-bold text-gray-900 hover:text-[#39FF14] transition-colors gap-2 text-sm uppercase tracking-wide">
-                    Learn more <ArrowRight className="w-4 h-4 text-[#39FF14]" />
+                  <a href="#" className="inline-flex items-center font-bold text-[#F8F9FA] hover:text-[#FF6C37] transition-colors gap-2 text-sm uppercase tracking-wide">
+                    Learn more <ArrowRight className="w-4 h-4 text-[#FF6C37]" />
                   </a>
                 </CardContent>
               </Card>
@@ -130,13 +130,13 @@ export default function Home() {
 
       {/* --- ABOUT SECTION --- */}
       <section id="about" className="py-24 px-6 max-w-7xl mx-auto relative">
-        <div className="absolute top-20 left-1/2 -translate-x-1/2 text-[150px] md:text-[200px] font-black text-gray-50 uppercase tracking-tighter -z-10 select-none pointer-events-none whitespace-nowrap">
+        <div className="absolute top-10 md:top-20 left-1/2 -translate-x-1/2 text-[25vw] md:text-[150px] lg:text-[200px] font-black text-[#F8F9FA]/5 uppercase tracking-tighter -z-10 select-none pointer-events-none whitespace-nowrap">
           ABOUT ME
         </div>
 
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="flex-1 relative flex justify-center w-full max-w-[500px]">
-            <div className="w-[350px] h-[350px] md:w-[450px] md:h-[450px] bg-[#39FF14] rounded-full overflow-hidden flex items-end justify-center pt-10">
+            <div className="w-[350px] h-[350px] md:w-[450px] md:h-[450px] bg-[#FF6C37] rounded-full overflow-hidden flex items-end justify-center pt-10">
               <Image
                 src="/abdul_portrait.png"
                 alt="Abdul Dev"
@@ -147,51 +147,51 @@ export default function Home() {
             </div>
 
             {/* Decorative Badges */}
-            <div className="absolute top-1/4 -left-4 bg-black text-white px-4 py-2 rounded-full text-xs font-bold shadow-xl rotate-[-10deg]">
+            <div className="absolute top-1/4 -left-4 bg-[#2A2A2A] text-[#F8F9FA] px-4 py-2 rounded-full text-xs font-bold shadow-xl rotate-[-10deg]">
               Backend Dev
             </div>
-            <div className="absolute top-1/2 -right-4 bg-black text-white px-4 py-2 rounded-full text-xs font-bold shadow-xl rotate-[5deg]">
+            <div className="absolute top-1/2 -right-4 bg-[#2A2A2A] text-[#F8F9FA] px-4 py-2 rounded-full text-xs font-bold shadow-xl rotate-[5deg]">
               System Design
             </div>
-            <div className="absolute bottom-10 left-10 bg-white text-black px-4 py-2 rounded-full text-xs font-bold shadow-xl border border-gray-200 rotate-[-5deg]">
+            <div className="absolute bottom-10 left-10 bg-[#1F1F1F] text-[#1F1F1F] px-4 py-2 rounded-full text-xs font-bold shadow-xl border border-gray-700 rotate-[-5deg]">
               Frontend
             </div>
-            <div className="absolute bottom-4 right-12 bg-white text-black px-4 py-2 rounded-full text-xs font-bold shadow-xl border border-gray-200 rotate-[10deg]">
+            <div className="absolute bottom-4 right-12 bg-[#1F1F1F] text-[#1F1F1F] px-4 py-2 rounded-full text-xs font-bold shadow-xl border border-gray-700 rotate-[10deg]">
               Architecture
             </div>
           </div>
 
           <div className="flex-1 space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-100 bg-white shadow-sm">
-              <Sparkles className="w-4 h-4 text-[#39FF14]" />
-              <span className="text-sm font-semibold text-gray-700">About Me</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-800 bg-[#1F1F1F] shadow-sm">
+              <Sparkles className="w-4 h-4 text-[#FF6C37]" />
+              <span className="text-sm font-semibold text-gray-300">About Me</span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-              Who is <span className="text-[#39FF14]">Abdul Dev?</span>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-[#F8F9FA] leading-tight">
+              Who is <span className="text-[#FF6C37]">Abdul Dev?</span>
             </h2>
 
             <p className="text-lg text-gray-500 leading-relaxed max-w-2xl">
               I am a passionate and dedicated Senior Software Engineer with a strong foundation in computer science. I specialize in building scalable, efficient, and robust web applications. With over 8 years of experience, I have successfully delivered high-quality software solutions for various industries, constantly pushing the boundaries of what is possible on the web.
             </p>
 
-            <div className="grid grid-cols-3 gap-6 pt-4 border-t border-gray-100">
+            <div className="grid grid-cols-3 gap-6 pt-4 border-t border-gray-800">
               <div>
-                <div className="text-3xl md:text-4xl font-black text-[#39FF14]">600+</div>
+                <div className="text-3xl md:text-4xl font-black text-[#FF6C37]">600+</div>
                 <div className="text-sm text-gray-500 font-medium mt-1 uppercase tracking-wide">Projects Completed</div>
               </div>
               <div>
-                <div className="text-3xl md:text-4xl font-black text-[#39FF14]">50+</div>
+                <div className="text-3xl md:text-4xl font-black text-[#FF6C37]">50+</div>
                 <div className="text-sm text-gray-500 font-medium mt-1 uppercase tracking-wide">Industry Covered</div>
               </div>
               <div>
-                <div className="text-3xl md:text-4xl font-black text-[#39FF14]">5+</div>
+                <div className="text-3xl md:text-4xl font-black text-[#FF6C37]">5+</div>
                 <div className="text-sm text-gray-500 font-medium mt-1 uppercase tracking-wide">Years of Experience</div>
               </div>
             </div>
 
             <div className="pt-6">
-              <Button className="bg-[#39FF14] text-black hover:bg-[#32e011] rounded-full px-8 py-6 text-base font-semibold shadow-lg transition-all">
+              <Button className="bg-[#FF6C37] text-[#1F1F1F] hover:bg-[#e65c2b] rounded-full px-8 py-6 text-base font-semibold shadow-lg transition-all">
                 Download CV
               </Button>
             </div>
@@ -201,22 +201,22 @@ export default function Home() {
 
       {/* --- WORKS SECTION --- */}
       <section id="works" className="py-24 px-6 max-w-7xl mx-auto relative">
-        <div className="absolute top-20 left-1/2 -translate-x-1/2 text-[120px] md:text-[200px] font-black text-gray-50 uppercase tracking-tighter -z-10 select-none pointer-events-none whitespace-nowrap">
+        <div className="absolute top-10 md:top-20 left-1/2 -translate-x-1/2 text-[25vw] md:text-[150px] lg:text-[200px] font-black text-[#F8F9FA]/5 uppercase tracking-tighter -z-10 select-none pointer-events-none whitespace-nowrap">
           MY WORK
         </div>
 
         <div className="flex flex-col gap-12">
           <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6">
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-100 bg-white shadow-sm">
-                <Sparkles className="w-4 h-4 text-[#39FF14]" />
-                <span className="text-sm font-semibold text-gray-700">Portfolio</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-800 bg-[#1F1F1F] shadow-sm">
+                <Sparkles className="w-4 h-4 text-[#FF6C37]" />
+                <span className="text-sm font-semibold text-gray-300">Portfolio</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">
-                Selected <span className="text-[#39FF14]">Projects</span>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-[#F8F9FA]">
+                Selected <span className="text-[#FF6C37]">Projects</span>
               </h2>
             </div>
-            <Button variant="outline" className="rounded-full px-6 py-5 font-semibold transition-all border-gray-200 text-gray-900 hover:bg-gray-50">
+            <Button variant="outline" className="w-full md:w-auto rounded-full px-6 py-5 font-semibold transition-all border-gray-700 text-[#F8F9FA] hover:bg-[#2A2A2A]">
               View All Projects
             </Button>
           </div>
@@ -252,33 +252,33 @@ export default function Home() {
                 image: "bg-gray-900"
               }
             ].map((project, i) => (
-              <Card key={i} className="border-none shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] bg-white/80 backdrop-blur-md hover:-translate-y-2 transition-transform duration-300 rounded-3xl overflow-hidden group">
+              <Card key={i} className="border-none shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] bg-[#1F1F1F]/80 backdrop-blur-md hover:-translate-y-2 transition-transform duration-300 rounded-3xl overflow-hidden group">
                 <div className={`h-64 w-full ${project.image} relative overflow-hidden flex items-center justify-center p-6`}>
                   {/* Decorative background for placeholder */}
                   <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
-                  <div className="relative z-10 w-full h-full border-2 border-dashed border-gray-600 rounded-xl flex items-center justify-center bg-black/20 backdrop-blur-sm group-hover:border-[#39FF14] transition-colors">
-                     <ImageIcon className="w-12 h-12 text-gray-500 group-hover:text-[#39FF14] transition-colors" />
+                  <div className="relative z-10 w-full h-full border-2 border-dashed border-gray-600 rounded-xl flex items-center justify-center bg-[#2A2A2A]/20 backdrop-blur-sm group-hover:border-[#FF6C37] transition-colors">
+                     <ImageIcon className="w-12 h-12 text-gray-500 group-hover:text-[#FF6C37] transition-colors" />
                   </div>
                   
                   {/* Overlay buttons on hover */}
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 z-20">
-                     <Button className="bg-[#39FF14] text-black hover:bg-[#32e011] rounded-full">
+                  <div className="absolute inset-0 bg-[#2A2A2A]/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 z-20">
+                     <Button className="bg-[#FF6C37] text-[#1F1F1F] hover:bg-[#e65c2b] rounded-full">
                        <Eye className="w-4 h-4 mr-2" /> Live Demo
                      </Button>
-                     <Button variant="secondary" className="bg-white text-black hover:bg-gray-100 rounded-full">
+                     <Button variant="secondary" className="bg-[#1F1F1F] text-[#1F1F1F] hover:bg-gray-800 rounded-full">
                        <Code className="w-4 h-4 mr-2" /> Source
                      </Button>
                   </div>
                 </div>
                 <CardContent className="p-8">
-                  <div className="text-sm font-bold text-[#39FF14] uppercase tracking-wider mb-2">{project.category}</div>
-                  <CardTitle className="text-2xl font-bold text-gray-900 mb-3">{project.title}</CardTitle>
+                  <div className="text-sm font-bold text-[#FF6C37] uppercase tracking-wider mb-2">{project.category}</div>
+                  <CardTitle className="text-2xl font-bold text-[#F8F9FA] mb-3">{project.title}</CardTitle>
                   <CardDescription className="text-gray-500 text-base leading-relaxed mb-6">
                     {project.description}
                   </CardDescription>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, j) => (
-                      <Badge key={j} variant="secondary" className="bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium">
+                      <Badge key={j} variant="secondary" className="bg-gray-800 hover:bg-gray-200 text-gray-300 font-medium">
                         {tag}
                       </Badge>
                     ))}
@@ -292,17 +292,17 @@ export default function Home() {
 
       {/* --- TOOLS SECTION --- */}
       <section className="py-24 px-6 max-w-5xl mx-auto relative mb-20 text-center">
-        <div className="absolute top-10 left-1/2 -translate-x-1/2 text-[100px] md:text-[150px] font-black text-gray-50 uppercase tracking-tighter -z-10 select-none pointer-events-none whitespace-nowrap w-full text-center overflow-hidden">
+        <div className="absolute top-10 left-1/2 -translate-x-1/2 text-[20vw] md:text-[100px] lg:text-[150px] font-black text-[#F8F9FA]/5 uppercase tracking-tighter -z-10 select-none pointer-events-none whitespace-nowrap w-full text-center overflow-hidden">
           MY FAVORITE TOOLS
         </div>
 
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-100 bg-white shadow-sm mb-6 mx-auto">
-          <Sparkles className="w-4 h-4 text-[#39FF14]" />
-          <span className="text-sm font-semibold text-gray-700">My Favorite Tools</span>
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-800 bg-[#1F1F1F] shadow-sm mb-6 mx-auto">
+          <Sparkles className="w-4 h-4 text-[#FF6C37]" />
+          <span className="text-sm font-semibold text-gray-300">My Favorite Tools</span>
         </div>
 
-        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-16 mx-auto max-w-2xl">
-          Exploring the <span className="text-[#39FF14]">Tools</span><br /> Behind My Engineering
+        <h2 className="text-4xl md:text-5xl font-extrabold text-[#F8F9FA] mb-16 mx-auto max-w-2xl">
+          Exploring the <span className="text-[#FF6C37]">Tools</span><br /> Behind My Engineering
         </h2>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-left">
@@ -314,20 +314,20 @@ export default function Home() {
             { name: "Docker", percent: 90, icon: Box },
             { name: "TypeScript", percent: 95, icon: PenTool },
           ].map((tool, i) => (
-            <Card key={i} className="border-none shadow-[0_4px_20px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.15)] transition-all bg-white rounded-2xl">
+            <Card key={i} className="border-none shadow-[0_4px_20px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.15)] transition-all bg-[#1F1F1F] rounded-2xl">
               <CardContent className="p-6">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-3">
-                    <div className="p-2.5 bg-gray-50 rounded-xl">
-                      <tool.icon className="w-6 h-6 text-gray-700" />
+                    <div className="p-2.5 bg-[#2A2A2A] rounded-xl">
+                      <tool.icon className="w-6 h-6 text-gray-300" />
                     </div>
-                    <span className="font-bold text-gray-900 text-lg">{tool.name}</span>
+                    <span className="font-bold text-[#F8F9FA] text-lg">{tool.name}</span>
                   </div>
-                  <Badge className="bg-[#39FF14] text-black hover:bg-[#32e011] font-bold text-xs rounded-full px-2">
+                  <Badge className="bg-[#FF6C37] text-[#1F1F1F] hover:bg-[#e65c2b] font-bold text-xs rounded-full px-2">
                     {tool.percent}%
                   </Badge>
                 </div>
-                <Progress value={tool.percent} className="h-2 bg-gray-100 [&>div]:bg-[#39FF14]" />
+                <Progress value={tool.percent} className="h-2 bg-gray-800 [&>div]:bg-[#FF6C37]" />
               </CardContent>
             </Card>
           ))}
@@ -335,27 +335,27 @@ export default function Home() {
       </section>
 
       {/* --- FOOTER SECTION --- */}
-      <footer className="w-full bg-black text-white py-24 px-6 relative overflow-hidden border-t-2 border-[#39FF14]">
+      <footer className="w-full bg-[#2A2A2A] text-[#F8F9FA] py-24 px-6 relative overflow-hidden border-t-2 border-[#FF6C37]">
         {/* Background effect */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#39FF14]/10 blur-[100px] rounded-full pointer-events-none"></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#FF6C37]/10 blur-[100px] rounded-full pointer-events-none"></div>
 
         <div className="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row justify-between items-center md:items-end gap-16">
           <div className="space-y-8 text-center md:text-left flex-1">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-800 bg-gray-900/50">
-              <Sparkles className="w-4 h-4 text-[#39FF14]" />
+              <Sparkles className="w-4 h-4 text-[#FF6C37]" />
               <span className="text-sm font-semibold text-gray-300">Available for Work</span>
             </div>
 
-            <h2 className="text-5xl md:text-7xl font-black tracking-tight text-white leading-tight">
+            <h2 className="text-5xl md:text-7xl font-black tracking-tight text-[#F8F9FA] leading-tight">
               Let's Build Something<br />
-              <span className="text-[#39FF14]">Amazing.</span>
+              <span className="text-[#FF6C37]">Amazing.</span>
             </h2>
 
             <p className="text-gray-400 max-w-lg text-lg leading-relaxed mx-auto md:mx-0">
               Always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
 
-            <Button className="bg-[#39FF14] text-black hover:bg-[#32e011] rounded-full px-8 py-6 text-base font-bold shadow-[0_4px_20px_-5px_rgba(57,255,20,0.4)] transition-all">
+            <Button className="bg-[#FF6C37] text-[#1F1F1F] hover:bg-[#e65c2b] rounded-full px-8 py-6 text-base font-bold shadow-[0_4px_20px_-5px_rgba(57,255,20,0.4)] transition-all">
               Say Hello <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </div>
@@ -398,8 +398,8 @@ export default function Home() {
                   icon: Mail
                 }
               ].map((social, i) => (
-                <a key={i} href={social.href} aria-label={social.label} className="w-14 h-14 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center hover:bg-[#39FF14] hover:text-black hover:border-[#39FF14] hover:-translate-y-1 transition-all duration-300 group shadow-lg">
-                  <social.icon className="w-6 h-6 text-gray-400 group-hover:text-black transition-colors" />
+                <a key={i} href={social.href} aria-label={social.label} className="w-14 h-14 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center hover:bg-[#FF6C37] hover:text-[#1F1F1F] hover:border-[#FF6C37] hover:-translate-y-1 transition-all duration-300 group shadow-lg">
+                  <social.icon className="w-6 h-6 text-gray-400 group-hover:text-[#1F1F1F] transition-colors" />
                 </a>
               ))}
             </div>
@@ -411,7 +411,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full text-center text-[12vw] font-black text-gray-900/40 select-none pointer-events-none translate-y-1/4 leading-none tracking-tighter">
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full text-center text-[10vw] md:text-[12vw] font-black text-[#F8F9FA]/10 select-none pointer-events-none translate-y-1/4 leading-none tracking-tighter">
           ABDUL.DEV
         </div>
       </footer>

@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${outfit.variable} antialiased`}>
-      <body className="min-h-full flex flex-col bg-white text-gray-900 font-sans selection:bg-brand selection:text-black">
+      <body className="min-h-full flex flex-col bg-[#1F1F1F] text-[#F8F9FA] font-sans selection:bg-[#FF6C37] selection:text-[#1F1F1F]">
         <Navbar />
         {children}
       </body>

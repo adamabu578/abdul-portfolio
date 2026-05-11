@@ -28,17 +28,14 @@ export default function Navbar() {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm py-4"
+          ? "bg-[#1F1F1F]/80 backdrop-blur-md border-b border-gray-800 shadow-sm py-4"
           : "bg-transparent py-6"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-black rounded-xl flex items-center justify-center group-hover:bg-[#39FF14] transition-colors">
-            <Sparkles className="w-5 h-5 text-white group-hover:text-black transition-colors" />
-          </div>
-          <span className="font-black text-xl tracking-tight">ABDUL.DEV</span>
+        <Link href="/" className="flex items-center group">
+          <span className="font-black text-xl tracking-tighter uppercase hover:text-[#FF6C37] transition-colors">ABDUL.DEV</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -47,7 +44,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-sm font-bold text-gray-600 hover:text-black transition-colors"
+              className="text-sm font-bold text-gray-300 hover:text-[#F8F9FA] transition-colors"
             >
               {link.name}
             </Link>
@@ -56,14 +53,14 @@ export default function Navbar() {
 
         {/* Desktop Action Button */}
         <div className="hidden md:block">
-          <Button className="bg-[#39FF14] text-black hover:bg-[#32e011] rounded-full px-6 py-5 font-semibold transition-all shadow-md hover:shadow-lg">
+          <Button className="bg-[#FF6C37] text-[#1F1F1F] hover:bg-[#e65c2b] rounded-full px-6 py-5 font-semibold transition-all shadow-md hover:shadow-lg">
             Let's Talk
           </Button>
         </div>
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden p-2 text-gray-900"
+          className="md:hidden p-2 text-[#F8F9FA]"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle mobile menu"
         >
@@ -73,20 +70,20 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl py-6 px-6 flex flex-col gap-6">
+        <div className="md:hidden absolute top-full left-0 w-full bg-[#1F1F1F] border-b border-gray-800 shadow-xl py-6 px-6 flex flex-col gap-6">
           <nav className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-lg font-bold text-gray-800 hover:text-[#39FF14] transition-colors"
+                className="text-lg font-bold text-[#F8F9FA] hover:text-[#FF6C37] transition-colors"
               >
                 {link.name}
               </Link>
             ))}
           </nav>
-          <Button className="w-full bg-[#39FF14] text-black hover:bg-[#32e011] rounded-full py-6 font-semibold transition-all">
+          <Button className="w-full bg-[#FF6C37] text-[#1F1F1F] hover:bg-[#e65c2b] rounded-full py-6 font-semibold transition-all">
             Let's Talk
           </Button>
         </div>
