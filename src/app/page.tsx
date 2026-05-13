@@ -42,11 +42,11 @@ export default function Home() {
 
           <div className="relative z-10 w-full flex justify-center">
             <Image
-              src="/abdul_portrait.png"
+              src="/abdul1.jpeg"
               alt="Abdul Dev"
               width={500}
               height={600}
-              className="object-contain h-[400px] md:h-[550px] w-auto drop-shadow-2xl"
+              className="object-cover h-[400px] md:h-[550px] w-auto shadow-2xl rounded-[2rem] border-4 border-[#2A2A2A]"
               priority
             />
           </div>
@@ -54,12 +54,6 @@ export default function Home() {
           {/* Floating Badges */}
           <div className="absolute top-10 right-4 md:right-10 bg-[#2A2A2A] text-[#F8F9FA] px-5 py-3 rounded-full text-sm font-bold shadow-2xl rotate-12 z-20 flex items-center justify-center border-2 border-[#FF6C37] w-[100px] h-[100px]">
             <div className="text-center leading-tight text-xs uppercase tracking-widest">Hire<br />Me</div>
-          </div>
-          <div className="absolute bottom-16 -left-4 md:left-10 bg-[#FF6C37] text-[#1F1F1F] px-6 py-2.5 rounded-full text-sm font-bold shadow-xl -rotate-6 z-20">
-            Backend Dev
-          </div>
-          <div className="absolute top-1/2 -right-4 md:right-0 bg-[#2A2A2A] text-[#F8F9FA] px-6 py-2.5 rounded-full text-sm font-bold shadow-xl z-20">
-            Frontend Dev
           </div>
         </div>
       </section>
@@ -136,29 +130,16 @@ export default function Home() {
 
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="flex-1 relative flex justify-center w-full max-w-[500px]">
-            <div className="w-[350px] h-[350px] md:w-[450px] md:h-[450px] bg-[#FF6C37] rounded-full overflow-hidden flex items-end justify-center pt-10">
+            <div className="w-[350px] h-[350px] md:w-[450px] md:h-[450px] rounded-full overflow-hidden border-4 border-[#FF6C37] shadow-xl relative flex items-center justify-center">
               <Image
-                src="/abdul_portrait.png"
+                src="/abdul1.jpeg"
                 alt="Abdul Dev"
-                width={400}
-                height={500}
-                className="object-cover h-[90%] w-auto scale-110 translate-y-4"
+                width={450}
+                height={450}
+                className="object-cover w-full h-full"
               />
             </div>
 
-            {/* Decorative Badges */}
-            <div className="absolute top-1/4 -left-4 bg-[#2A2A2A] text-[#F8F9FA] px-4 py-2 rounded-full text-xs font-bold shadow-xl rotate-[-10deg]">
-              Backend Dev
-            </div>
-            <div className="absolute top-1/2 -right-4 bg-[#2A2A2A] text-[#F8F9FA] px-4 py-2 rounded-full text-xs font-bold shadow-xl rotate-[5deg]">
-              System Design
-            </div>
-            <div className="absolute bottom-10 left-10 bg-[#1F1F1F] text-[#1F1F1F] px-4 py-2 rounded-full text-xs font-bold shadow-xl border border-gray-700 rotate-[-5deg]">
-              Frontend
-            </div>
-            <div className="absolute bottom-4 right-12 bg-[#1F1F1F] text-[#1F1F1F] px-4 py-2 rounded-full text-xs font-bold shadow-xl border border-gray-700 rotate-[10deg]">
-              Architecture
-            </div>
           </div>
 
           <div className="flex-1 space-y-8">
