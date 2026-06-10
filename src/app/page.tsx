@@ -16,7 +16,7 @@ export default function Home() {
             <span className="text-sm font-semibold text-gray-300">Hello There!</span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-[#F8F9FA] leading-[1.1]">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-[#F8F9FA] leading-[1.1]">
             <span className="text-[#FF6C37]">I'm Abdul Dev,</span><br />
             Senior Software<br /> Engineer based in NIG.
           </h1>
@@ -37,8 +37,8 @@ export default function Home() {
 
         <div className="flex-1 relative flex justify-center lg:justify-end items-center w-full max-w-[500px] lg:max-w-none">
           {/* Background circles */}
-          <div className="absolute w-[300px] h-[300px] md:w-[450px] md:h-[450px] bg-[#FF6C37] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-          <div className="absolute w-[350px] h-[350px] md:w-[500px] md:h-[500px] bg-[#FF6C37]/20 rounded-full blur-3xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[450px] md:h-[450px] bg-[#FF6C37] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] md:w-[500px] md:h-[500px] bg-[#FF6C37]/20 rounded-full blur-3xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
 
           <div className="relative z-10 w-full flex justify-center">
             <Image
@@ -46,7 +46,7 @@ export default function Home() {
               alt="Abdul Dev"
               width={500}
               height={600}
-              className="object-cover h-[400px] md:h-[550px] w-auto shadow-2xl rounded-[2rem] border-4 border-[#2A2A2A]"
+              className="object-cover h-[350px] w-[280px] sm:h-[400px] sm:w-[320px] md:h-[550px] md:w-auto shadow-2xl rounded-[2rem] border-4 border-[#2A2A2A]"
               priority
             />
           </div>
@@ -100,11 +100,11 @@ export default function Home() {
               { title: "Frontend Development", icon: Layout, desc: "Building beautiful, responsive, and dynamic user interfaces using React, Next.js, and modern CSS frameworks like Tailwind." },
               { title: "Cloud & DevOps", icon: Monitor, desc: "Deploying and managing scalable infrastructure on AWS/GCP, setting up CI/CD pipelines, and ensuring system reliability." }
             ].map((service, i) => (
-              <Card key={i} className="border border-transparent hover:border-[#FF6C37] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] bg-[#1F1F1F]/80 backdrop-blur-md hover:-translate-y-2 transition-all duration-300 rounded-3xl overflow-hidden group">
+              <Card key={i} tabIndex={0} className="border border-transparent hover:border-[#FF6C37] active:border-[#FF6C37] focus:border-[#FF6C37] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] bg-[#1F1F1F]/80 backdrop-blur-md hover:-translate-y-2 active:-translate-y-2 focus:-translate-y-2 transition-all duration-300 rounded-3xl overflow-hidden group outline-none cursor-pointer lg:cursor-default">
                 <CardHeader className="p-8">
-                  <div className="w-14 h-14 bg-[#2A2A2A] rounded-2xl flex items-center justify-center mb-4 group-hover:bg-[#FF6C37] transition-colors relative">
-                    <div className="absolute -left-2 top-2 w-2 h-8 bg-[#FF6C37] rounded-r-md group-hover:bg-[#2A2A2A] transition-colors" />
-                    <service.icon className="w-7 h-7 text-[#F8F9FA] group-hover:text-[#1F1F1F]" />
+                  <div className="w-14 h-14 bg-[#2A2A2A] rounded-2xl flex items-center justify-center mb-4 group-hover:bg-[#FF6C37] group-active:bg-[#FF6C37] group-focus:bg-[#FF6C37] transition-colors relative">
+                    <div className="absolute -left-2 top-2 w-2 h-8 bg-[#FF6C37] rounded-r-md group-hover:bg-[#2A2A2A] group-active:bg-[#2A2A2A] group-focus:bg-[#2A2A2A] transition-colors" />
+                    <service.icon className="w-7 h-7 text-[#F8F9FA] group-hover:text-[#1F1F1F] group-active:text-[#1F1F1F] group-focus:text-[#1F1F1F]" />
                   </div>
                   <CardTitle className="text-2xl font-bold text-[#F8F9FA]">{service.title}</CardTitle>
                   <CardDescription className="text-gray-500 text-base mt-3 leading-relaxed">
@@ -130,7 +130,7 @@ export default function Home() {
 
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="flex-1 relative flex justify-center w-full max-w-[500px]">
-            <div className="w-[350px] h-[350px] md:w-[450px] md:h-[450px] rounded-full overflow-hidden border-4 border-[#FF6C37] shadow-xl relative flex items-center justify-center">
+            <div className="w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[450px] md:h-[450px] rounded-full overflow-hidden border-4 border-[#FF6C37] shadow-xl relative flex items-center justify-center">
               <Image
                 src="/abdul1.jpeg"
                 alt="Abdul Dev"
@@ -202,7 +202,7 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {[
               {
                 title: "Hexacore Application",
@@ -218,7 +218,9 @@ export default function Home() {
                 category: "Frontend Development",
                 description: "A comprehensive financial dashboard with real-time analytics, secure transactions, and interactive data visualization.",
                 tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-                image: "bg-gray-900"
+                image: "bg-gray-900",
+                imageUrl: "/hexa.png",
+                link: "https://hexacore-website.vercel.app/"
               },
               {
                 title: "Stitches Africa",
@@ -227,7 +229,7 @@ export default function Home() {
                 tags: ["Next.js", "React", "Tailwind CSS", "Node.js"],
                 image: "bg-gray-800",
                 imageUrl: "/stitch.png",
-                link: "https://stitches.africa"
+                link: "https://stitchesafrica.com"
               },
               {
                 title: "AI Content Platform",
@@ -237,52 +239,51 @@ export default function Home() {
                 image: "bg-gray-800"
               }
             ].map((project, i) => (
-              <Card key={i} className="border border-transparent hover:border-[#FF6C37] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] bg-[#1F1F1F]/80 backdrop-blur-md hover:-translate-y-2 transition-all duration-300 rounded-3xl overflow-hidden group">
-                <div className={`h-64 w-full ${project.image} relative overflow-hidden flex items-center justify-center p-6`}>
+              <Card key={i} tabIndex={0} className="flex flex-col border border-transparent hover:border-[#FF6C37] active:border-[#FF6C37] focus:border-[#FF6C37] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] bg-[#1F1F1F]/80 backdrop-blur-md hover:-translate-y-2 active:-translate-y-2 focus:-translate-y-2 transition-all duration-300 rounded-3xl overflow-hidden group outline-none cursor-pointer lg:cursor-default">
+                <div className={`h-32 md:h-36 lg:h-40 shrink-0 w-full ${project.image} relative overflow-hidden flex items-center justify-center p-4`}>
                   {project.imageUrl ? (
                     <Image
                       src={project.imageUrl}
                       alt={project.title}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105 group-active:scale-105 group-focus:scale-105"
                     />
                   ) : (
                     <>
                       {/* Decorative background for placeholder */}
                       <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
-                      <div className="relative z-10 w-full h-full border-2 border-dashed border-gray-600 rounded-xl flex items-center justify-center bg-[#2A2A2A]/20 backdrop-blur-sm group-hover:border-[#FF6C37] transition-colors">
-                         <ImageIcon className="w-12 h-12 text-gray-500 group-hover:text-[#FF6C37] transition-colors" />
+                      <div className="relative z-10 w-full h-full border-2 border-dashed border-gray-600 rounded-xl flex items-center justify-center bg-[#2A2A2A]/20 backdrop-blur-sm group-hover:border-[#FF6C37] group-active:border-[#FF6C37] group-focus:border-[#FF6C37] transition-colors">
+                        <ImageIcon className="w-12 h-12 text-gray-500 group-hover:text-[#FF6C37] group-active:text-[#FF6C37] group-focus:text-[#FF6C37] transition-colors" />
                       </div>
                     </>
                   )}
-                  
-                  {/* Overlay buttons on hover */}
-                  <div className="absolute inset-0 bg-[#2A2A2A]/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 z-20">
-                     {project.link ? (
-                       <a href={project.link} target="_blank" rel="noopener noreferrer">
-                         <Button className="bg-[#FF6C37] text-[#1F1F1F] hover:bg-[#e65c2b] rounded-full">
-                           <Eye className="w-4 h-4 mr-2" /> Live Demo
-                         </Button>
-                       </a>
-                     ) : (
-                       <Button className="bg-[#FF6C37] text-[#1F1F1F] hover:bg-[#e65c2b] rounded-full">
-                         <Eye className="w-4 h-4 mr-2" /> Live Demo
-                       </Button>
-                     )}
-                  </div>
+
                 </div>
-                <CardContent className="p-8">
-                  <div className="text-sm font-bold text-[#FF6C37] uppercase tracking-wider mb-2">{project.category}</div>
-                  <CardTitle className="text-2xl font-bold text-[#F8F9FA] mb-3">{project.title}</CardTitle>
-                  <CardDescription className="text-gray-500 text-base leading-relaxed mb-6">
+                <CardContent className="p-4 flex flex-col flex-grow">
+                  <div className="text-[10px] font-bold text-[#FF6C37] uppercase tracking-wider mb-1">{project.category}</div>
+                  <CardTitle className="text-base md:text-lg font-bold text-[#F8F9FA] mb-1.5">{project.title}</CardTitle>
+                  <CardDescription className="text-gray-500 text-xs leading-relaxed mb-3 flex-grow line-clamp-2">
                     {project.description}
                   </CardDescription>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-1 mb-3">
                     {project.tags.map((tag, j) => (
-                      <Badge key={j} variant="secondary" className="bg-gray-800 hover:bg-gray-200 text-gray-300 font-medium">
+                      <Badge key={j} variant="secondary" className="bg-gray-800 hover:bg-gray-200 text-gray-300 font-medium text-[9px] md:text-[10px] px-1.5 py-0.5">
                         {tag}
                       </Badge>
                     ))}
+                  </div>
+                  <div className="flex mt-auto">
+                    {project.link ? (
+                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block">
+                        <Button className="bg-[#FF6C37] text-[#1F1F1F] hover:bg-[#e65c2b] rounded-full px-4 h-8 text-[11px] font-semibold">
+                          <Eye className="w-3 h-3 mr-1.5" /> Live Demo
+                        </Button>
+                      </a>
+                    ) : (
+                      <Button disabled className="bg-gray-800 text-gray-500 rounded-full px-4 h-8 text-[11px] font-semibold opacity-50 cursor-not-allowed">
+                        <Eye className="w-3 h-3 mr-1.5" /> Live Demo
+                      </Button>
+                    )}
                   </div>
                 </CardContent>
               </Card>
@@ -306,7 +307,7 @@ export default function Home() {
           Exploring the <span className="text-[#FF6C37]">Tools</span><br /> Behind My Engineering
         </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 text-left">
           {[
             { name: "Node.js", percent: 95, icon: Box },
             { name: "React / Next.js", percent: 92, icon: Layout },
@@ -315,20 +316,20 @@ export default function Home() {
             { name: "Docker", percent: 90, icon: Box },
             { name: "TypeScript", percent: 95, icon: PenTool },
           ].map((tool, i) => (
-            <Card key={i} className="border border-transparent hover:border-[#FF6C37] shadow-[0_4px_20px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.15)] transition-all bg-[#1F1F1F] rounded-2xl group">
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2.5 bg-[#2A2A2A] rounded-xl">
-                      <tool.icon className="w-6 h-6 text-gray-300" />
+            <Card key={i} tabIndex={0} className="border border-transparent hover:border-[#FF6C37] active:border-[#FF6C37] focus:border-[#FF6C37] shadow-[0_4px_20px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.15)] active:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.15)] focus:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.15)] transition-all bg-[#1F1F1F] rounded-2xl group outline-none cursor-pointer lg:cursor-default">
+              <CardContent className="p-4 md:p-6">
+                <div className="flex items-center justify-between mb-4 md:mb-6">
+                  <div className="flex items-center gap-2 md:gap-3">
+                    <div className="p-2 md:p-2.5 bg-[#2A2A2A] rounded-xl">
+                      <tool.icon className="w-5 h-5 md:w-6 md:h-6 text-gray-300" />
                     </div>
-                    <span className="font-bold text-[#F8F9FA] text-lg">{tool.name}</span>
+                    <span className="font-bold text-[#F8F9FA] text-sm md:text-lg">{tool.name}</span>
                   </div>
-                  <Badge className="bg-[#FF6C37] text-[#1F1F1F] hover:bg-[#e65c2b] font-bold text-xs rounded-full px-2">
+                  <Badge className="bg-[#FF6C37] text-[#1F1F1F] hover:bg-[#e65c2b] font-bold text-[10px] md:text-xs rounded-full px-1.5 md:px-2">
                     {tool.percent}%
                   </Badge>
                 </div>
-                <Progress value={tool.percent} className="h-2 bg-gray-800 [&>div]:bg-[#FF6C37]" />
+                <Progress value={tool.percent} className="h-1.5 md:h-2 bg-gray-800 [&>div]:bg-[#FF6C37]" />
               </CardContent>
             </Card>
           ))}
@@ -399,8 +400,8 @@ export default function Home() {
                   icon: Mail
                 }
               ].map((social, i) => (
-                <a key={i} href={social.href} aria-label={social.label} className="w-14 h-14 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center hover:bg-[#FF6C37] hover:text-[#1F1F1F] hover:border-[#FF6C37] hover:-translate-y-1 transition-all duration-300 group shadow-lg">
-                  <social.icon className="w-6 h-6 text-gray-400 group-hover:text-[#1F1F1F] transition-colors" />
+                <a key={i} href={social.href} aria-label={social.label} className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center hover:bg-[#FF6C37] hover:text-[#1F1F1F] hover:border-[#FF6C37] hover:-translate-y-1 transition-all duration-300 group shadow-lg">
+                  <social.icon className="w-5 h-5 md:w-6 md:h-6 text-gray-400 group-hover:text-[#1F1F1F] transition-colors" />
                 </a>
               ))}
             </div>
