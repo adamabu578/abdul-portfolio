@@ -158,7 +158,7 @@ export default function Home() {
 
             <div className="grid grid-cols-3 gap-6 pt-4 border-t border-gray-800">
               <div>
-                <div className="text-3xl md:text-4xl font-black text-[#FF6C37]">600+</div>
+                <div className="text-3xl md:text-4xl font-black text-[#FF6C37]">100+</div>
                 <div className="text-sm text-gray-500 font-medium mt-1 uppercase tracking-wide">Projects Completed</div>
               </div>
               <div>
@@ -197,7 +197,7 @@ export default function Home() {
                 My <span className="text-[#FF6C37]">Projects</span>
               </h2>
             </div>
-            <Button variant="outline" className="w-full md:w-auto rounded-full px-6 py-5 font-semibold transition-all border-gray-700 text-[#F8F9FA] hover:bg-[#2A2A2A]">
+            <Button className="w-full md:w-auto bg-[#FF6C37] text-[#1F1F1F] hover:bg-[#e65c2b] rounded-full px-6 py-5 font-semibold transition-all shadow-md hover:shadow-lg">
               View All Projects
             </Button>
           </div>
