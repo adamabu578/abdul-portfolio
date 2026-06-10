@@ -100,7 +100,7 @@ export default function Home() {
               { title: "Frontend Development", icon: Layout, desc: "Building beautiful, responsive, and dynamic user interfaces using React, Next.js, and modern CSS frameworks like Tailwind." },
               { title: "Cloud & DevOps", icon: Monitor, desc: "Deploying and managing scalable infrastructure on AWS/GCP, setting up CI/CD pipelines, and ensuring system reliability." }
             ].map((service, i) => (
-              <Card key={i} className="border-none shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] bg-[#1F1F1F]/80 backdrop-blur-md hover:-translate-y-2 transition-transform duration-300 rounded-3xl overflow-hidden group">
+              <Card key={i} className="border border-transparent hover:border-[#FF6C37] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] bg-[#1F1F1F]/80 backdrop-blur-md hover:-translate-y-2 transition-all duration-300 rounded-3xl overflow-hidden group">
                 <CardHeader className="p-8">
                   <div className="w-14 h-14 bg-[#2A2A2A] rounded-2xl flex items-center justify-center mb-4 group-hover:bg-[#FF6C37] transition-colors relative">
                     <div className="absolute -left-2 top-2 w-2 h-8 bg-[#FF6C37] rounded-r-md group-hover:bg-[#2A2A2A] transition-colors" />
@@ -194,7 +194,7 @@ export default function Home() {
                 <span className="text-sm font-semibold text-gray-300">Portfolio</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-extrabold text-[#F8F9FA]">
-                Selected <span className="text-[#FF6C37]">Projects</span>
+                My <span className="text-[#FF6C37]">Projects</span>
               </h2>
             </div>
             <Button variant="outline" className="w-full md:w-auto rounded-full px-6 py-5 font-semibold transition-all border-gray-700 text-[#F8F9FA] hover:bg-[#2A2A2A]">
@@ -205,6 +205,15 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
+                title: "Hexacore Application",
+                category: "AI powered application for banks and fintech",
+                description: "A dynamic web application featuring modern design patterns, interactive UI elements, and a seamless user experience.",
+                tags: ["Next.js", "React", "Tailwind CSS"],
+                image: "bg-gray-900",
+                imageUrl: "/hexacore.png",
+                link: "https://hexacore.ng"
+              },
+              {
                 title: "FinTech Dashboard",
                 category: "Frontend Development",
                 description: "A comprehensive financial dashboard with real-time analytics, secure transactions, and interactive data visualization.",
@@ -212,11 +221,13 @@ export default function Home() {
                 image: "bg-gray-900"
               },
               {
-                title: "E-Commerce API",
-                category: "Backend Architecture",
-                description: "Scalable microservices architecture for a high-traffic e-commerce platform handling thousands of requests per second.",
-                tags: ["Node.js", "PostgreSQL", "Redis", "Docker"],
-                image: "bg-gray-800"
+                title: "Stitches Africa",
+                category: "E-Commerce Platform",
+                description: "A comprehensive e-commerce platform for Stitches Africa, featuring a seamless shopping experience and secure checkout.",
+                tags: ["Next.js", "React", "Tailwind CSS", "Node.js"],
+                image: "bg-gray-800",
+                imageUrl: "/stitch.png",
+                link: "https://stitches.africa"
               },
               {
                 title: "AI Content Platform",
@@ -224,31 +235,40 @@ export default function Home() {
                 description: "SaaS application that leverages AI models to generate marketing copy, blog posts, and social media content.",
                 tags: ["React", "Python", "OpenAI API"],
                 image: "bg-gray-800"
-              },
-              {
-                title: "Cloud Resource Manager",
-                category: "DevOps & Infrastructure",
-                description: "Internal tool for automated provisioning, monitoring, and scaling of cloud resources across multiple providers.",
-                tags: ["Go", "Kubernetes", "AWS", "Terraform"],
-                image: "bg-gray-900"
               }
             ].map((project, i) => (
-              <Card key={i} className="border-none shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] bg-[#1F1F1F]/80 backdrop-blur-md hover:-translate-y-2 transition-transform duration-300 rounded-3xl overflow-hidden group">
+              <Card key={i} className="border border-transparent hover:border-[#FF6C37] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] bg-[#1F1F1F]/80 backdrop-blur-md hover:-translate-y-2 transition-all duration-300 rounded-3xl overflow-hidden group">
                 <div className={`h-64 w-full ${project.image} relative overflow-hidden flex items-center justify-center p-6`}>
-                  {/* Decorative background for placeholder */}
-                  <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
-                  <div className="relative z-10 w-full h-full border-2 border-dashed border-gray-600 rounded-xl flex items-center justify-center bg-[#2A2A2A]/20 backdrop-blur-sm group-hover:border-[#FF6C37] transition-colors">
-                     <ImageIcon className="w-12 h-12 text-gray-500 group-hover:text-[#FF6C37] transition-colors" />
-                  </div>
+                  {project.imageUrl ? (
+                    <Image
+                      src={project.imageUrl}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <>
+                      {/* Decorative background for placeholder */}
+                      <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+                      <div className="relative z-10 w-full h-full border-2 border-dashed border-gray-600 rounded-xl flex items-center justify-center bg-[#2A2A2A]/20 backdrop-blur-sm group-hover:border-[#FF6C37] transition-colors">
+                         <ImageIcon className="w-12 h-12 text-gray-500 group-hover:text-[#FF6C37] transition-colors" />
+                      </div>
+                    </>
+                  )}
                   
                   {/* Overlay buttons on hover */}
                   <div className="absolute inset-0 bg-[#2A2A2A]/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 z-20">
-                     <Button className="bg-[#FF6C37] text-[#1F1F1F] hover:bg-[#e65c2b] rounded-full">
-                       <Eye className="w-4 h-4 mr-2" /> Live Demo
-                     </Button>
-                     <Button variant="secondary" className="bg-[#1F1F1F] text-[#1F1F1F] hover:bg-gray-800 rounded-full">
-                       <Code className="w-4 h-4 mr-2" /> Source
-                     </Button>
+                     {project.link ? (
+                       <a href={project.link} target="_blank" rel="noopener noreferrer">
+                         <Button className="bg-[#FF6C37] text-[#1F1F1F] hover:bg-[#e65c2b] rounded-full">
+                           <Eye className="w-4 h-4 mr-2" /> Live Demo
+                         </Button>
+                       </a>
+                     ) : (
+                       <Button className="bg-[#FF6C37] text-[#1F1F1F] hover:bg-[#e65c2b] rounded-full">
+                         <Eye className="w-4 h-4 mr-2" /> Live Demo
+                       </Button>
+                     )}
                   </div>
                 </div>
                 <CardContent className="p-8">
@@ -295,7 +315,7 @@ export default function Home() {
             { name: "Docker", percent: 90, icon: Box },
             { name: "TypeScript", percent: 95, icon: PenTool },
           ].map((tool, i) => (
-            <Card key={i} className="border-none shadow-[0_4px_20px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.15)] transition-all bg-[#1F1F1F] rounded-2xl">
+            <Card key={i} className="border border-transparent hover:border-[#FF6C37] shadow-[0_4px_20px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.15)] transition-all bg-[#1F1F1F] rounded-2xl group">
               <CardContent className="p-6">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-3">
